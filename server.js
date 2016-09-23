@@ -88,8 +88,8 @@ function createTemplate(data) {
     var date=data.date;
     var content=data.content;
     
-    var htmlTemplate = `<html>
-        
+    var htmlTemplate = `
+    <html>
         <head>
             ${title}
             <meta name="viewport" content="width-device-width, initial-scale-1" />
@@ -115,7 +115,8 @@ function createTemplate(data) {
             </div>
         </body>
     </html>
-     `;
+    `;
+    return htmlTemplate;
 }
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
