@@ -123,12 +123,10 @@ app.get('/', function (req, res) {
 });
 
 var counter=0;
-var button=document.getElementById('counter');
-button.onclick(){
+app.get('/counter' , funtion(req , res)){
     counter=counter+1;
-    var count=document.getElementById('count');
-    count.innerHtml=counter.toString();
-}
+    res.send(counter.toString());
+});
 
 app.get('/:articleName' , function (req , res) {
        
